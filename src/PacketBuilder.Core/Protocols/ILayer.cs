@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PacketBuilder.Core.Buffers;
 
-namespace PacketBuilder.Core.Protocols
+namespace PacketBuilder.Core.Protocols;
+
+/// <summary>A protocol layer that writes its header (and any nested payload) into a packet.</summary>
+public interface ILayer
 {
-    internal interface ILayer
-    {
-    }
+    void Write(ref PacketWriter writer);
 }
