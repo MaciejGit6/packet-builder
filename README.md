@@ -2,7 +2,7 @@
 
 A little C# tool that builds raw network packets byte by byte, from the Ethernet header up.
 
-I'm writing this for my Programming 3 (C#) course, but I also wanted it to be actually useful: it generates test traffic for **rawsight**, a packet sniffer I wrote in C. rawsight reads whole Ethernet frames off an interface and dissects them (ARP / ICMP / IP / TCP / UDP / CoAP / DTLS), so I needed something that could *produce* those frames on demand — crafted, malformed, whatever I want to throw at it. That's this.
+it generates test traffic for **rawsight**, a packet sniffer I wrote in C. rawsight reads whole Ethernet frames off an interface and dissects them (ARP / ICMP / IP / TCP / UDP / CoAP / DTLS), so I needed something that could *produce* those frames on demand — crafted, malformed, whatever I want to throw at it. That's this.
 
 The nice part is the two programs never touch each other's code. They only ever meet as bytes on the wire.
 
